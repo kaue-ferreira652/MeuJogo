@@ -5,25 +5,29 @@ void main() {
     player.setVida(25);
     player.setSanidade(30);
     player.setMovimento(9);
-    player.atacar(+4);
+    player.atacar(+10);
     player.bloqueio(-2);
     IO.println(player);
 
-    Inimigos zumbiSangue = new Inimigos("Zumbi de Sangue", 250,
-            0,25, 9);
-    zumbiSangue.atacar(+26);
-    zumbiSangue.bloqueio(-25);
+    Inimigos zumbiSangue = new Inimigos("Zumbi de Sangue", 50,
+            0,3, 9);
+    zumbiSangue.setNome("Zumbi de Sangue");
+    zumbiSangue.setVida(50);
+    zumbiSangue.setSanidade(0);
+    zumbiSangue.setMovimento(9);
+    zumbiSangue.atacar(+10);
+    zumbiSangue.bloqueio(-3);
     IO.println(zumbiSangue);
 
-    Npc larissa = new Npc("Larissa pingu", 9, 25,
+    Npc ivete = new Npc("Ivete", 10, 25,
             0, 6);
-    larissa.atacar(0);
-    larissa.bloqueio(0);
-    IO.println(larissa);
+    ivete.atacar(0);
+    ivete.bloqueio(0);
+    IO.println(ivete);
 
-    Boss tetéia = new Boss("tetéia", 2000, 1000, 500, 100);
-    tetéia.atacar(+100);
-    tetéia.bloqueio(500);
-    IO.println(tetéia);
+    Boss kian = new Boss("Kian", 2000, 1000, 500, 100);
+    kian.atacar(+60);
+    kian.bloqueio(-35);
+    IO.println(kian);
 
 }
